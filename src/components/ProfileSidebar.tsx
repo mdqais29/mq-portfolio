@@ -11,7 +11,7 @@ import {
   ArrowUpRight,
   Sparkles,
 } from "lucide-react";
-import profilePic from "../../public/images/profile-new.jpg";
+import profilePic from "../../public/images/qais-new.jpg";
 import { PortfolioData } from "../types/portfolio";
 
 interface ProfileSidebarProps {
