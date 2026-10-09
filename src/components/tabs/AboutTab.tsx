@@ -41,7 +41,7 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
   return (
     <div className="space-y-4">
       {/* Tab Banner */}
-      <div className="flex items-center justify-center border border-[#28333D] bg-[#19232D] px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
+      <div className="flex items-center justify-center border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
         <div className="flex items-center gap-2">
           <User className="h-4 w-4" />
           <span>ABOUT ME</span>
@@ -49,7 +49,7 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
       </div>
 
       {/* Unified Single Block Container */}
-      <div className="rounded-2xl border border-[#28333D] bg-[#121923] p-5 sm:p-7 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+      <div className="rounded-2xl border border-[#28333D]/70 bg-[#121923]/65 backdrop-blur-md p-5 sm:p-7 shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
         {/* Main Headline */}
         <h1 className="font-mono text-2xl sm:text-3xl font-bold tracking-tight text-[#E8EDF3] leading-snug">
           {data.bioIntro}
@@ -61,7 +61,7 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
         </p>
 
         {/* Integrated Narrative Sections Inside the Same Block */}
-        <div className="mt-6 pt-6 border-t border-[#28333D] space-y-3">
+        <div className="mt-6 pt-6 border-t border-[#28333D]/60 space-y-3">
           {sections.map((sec) => {
             const isOpen = activeSection === sec.id;
 
@@ -71,8 +71,8 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
                 onClick={() => handleToggle(sec.id)}
                 className={`cursor-pointer rounded-xl border p-4 sm:p-4.5 transition-all select-none ${
                   isOpen
-                    ? "border-[#78B9AF]/70 bg-[#16222E] shadow-sm"
-                    : "border-[#28333D] bg-[#19232D]/70 hover:border-[#3A4754] hover:bg-[#19232D]"
+                    ? "border-[#78B9AF]/70 bg-[#16222E]/80 backdrop-blur-xs shadow-sm"
+                    : "border-[#28333D]/70 bg-[#19232D]/50 hover:border-[#3A4754] hover:bg-[#19232D]/80 backdrop-blur-xs"
                 }`}
               >
                 {/* Header Row: Title on Left, Animated Chevron on Right */}
@@ -85,8 +85,8 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
                   <div
                     className={`shrink-0 flex h-7 w-7 items-center justify-center rounded-full border transition-all duration-200 ${
                       isOpen
-                        ? "border-[#78B9AF] bg-[#1E3035] text-[#78B9AF] shadow-[0_0_10px_rgba(120,185,175,0.3)]"
-                        : "border-[#28333D] bg-[#121923] text-[#9AA8B8]"
+                        ? "border-[#78B9AF] bg-[#1E3035]/80 text-[#78B9AF] shadow-[0_0_10px_rgba(120,185,175,0.3)]"
+                        : "border-[#28333D]/80 bg-[#121923]/60 text-[#9AA8B8]"
                     }`}
                   >
                     <ChevronDown
@@ -107,7 +107,7 @@ export const AboutTab: React.FC<AboutTabProps> = ({ data }) => {
                       transition={{ duration: 0.22, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-3.5 mt-3 border-t border-[#28333D]">
+                      <div className="pt-3.5 mt-3 border-t border-[#28333D]/60">
                         <p className="font-sans text-xs sm:text-sm text-[#9AA8B8] leading-relaxed">
                           {sec.content}
                         </p>

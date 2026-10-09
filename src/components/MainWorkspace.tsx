@@ -58,9 +58,9 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
       </div>
 
       {/* Outer Retro Digital Workspace Window Frame */}
-      <div className="relative z-10 w-full max-w-6xl rounded-2xl border border-[#28333D] bg-[#121923] shadow-[0_16px_48px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
+      <div className="relative z-10 w-full max-w-6xl rounded-2xl border border-[#28333D]/70 bg-[#121923]/75 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col">
         {/* Top Window Titlebar */}
-        <header className="border-b border-[#28333D] bg-[#16202C] px-4 py-3 sm:px-6 flex items-center justify-between gap-3 select-none">
+        <header className="border-b border-[#28333D]/60 bg-[#16202C]/65 backdrop-blur-md px-4 py-3 sm:px-6 flex items-center justify-between gap-3 select-none">
           {/* Left: Window Action Dots & App Title */}
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-1.5" aria-hidden="true">
@@ -81,7 +81,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
             <button
               onClick={onReplayIntro}
               title="Replay typewriter intro"
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[#28333D] bg-[#19232D] text-[#9AA8B8] hover:border-[#78B9AF] hover:text-[#E8EDF3] transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-[#28333D]/80 bg-[#19232D]/70 backdrop-blur-xs text-[#9AA8B8] hover:border-[#78B9AF] hover:text-[#E8EDF3] transition-colors cursor-pointer"
             >
               <RotateCcw className="h-3 w-3" />
               <span className="hidden sm:inline">Intro</span>
@@ -91,7 +91,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
 
         {/* Top Navigation Tabs Bar — ONLY ON TOP, RIGHT-ALIGNED */}
         <nav
-          className="border-b border-[#28333D] bg-[#121923] px-4 py-2.5 sm:px-6 md:px-8 overflow-x-auto no-scrollbar flex items-center justify-end gap-2"
+          className="border-b border-[#28333D]/60 bg-[#121923]/45 backdrop-blur-md px-4 py-2.5 sm:px-6 md:px-8 overflow-x-auto no-scrollbar flex items-center justify-end gap-2"
           aria-label="Main Navigation Tabs"
         >
           {tabs.map((tab) => {
@@ -102,8 +102,8 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
                 onClick={() => handleSelectTab(tab.id)}
                 className={`shrink-0 flex items-center px-3.5 py-1.5 rounded-lg font-mono text-xs font-semibold tracking-wider transition-all cursor-pointer select-none ${
                   isActive
-                    ? "border border-[#78B9AF] bg-[#1E3035] text-[#E8EDF3] shadow-xs"
-                    : "border border-[#28333D] bg-[#19232D] text-[#9AA8B8] hover:text-[#E8EDF3] hover:border-[#3A4754]"
+                    ? "border border-[#78B9AF] bg-[#1E3035]/85 text-[#E8EDF3] shadow-xs backdrop-blur-xs"
+                    : "border border-[#28333D]/80 bg-[#19232D]/60 text-[#9AA8B8] hover:text-[#E8EDF3] hover:border-[#3A4754] hover:bg-[#19232D]/80 backdrop-blur-xs"
                 }`}
               >
                 <span>{tab.label}</span>
@@ -158,7 +158,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
         </div>
 
         {/* Bottom Window Footer */}
-        <footer className="border-t border-[#28333D] bg-[#16202C] px-4 py-3 sm:px-6 md:px-8 flex items-center justify-end font-mono text-[11px] text-[#9AA8B8]">
+        <footer className="border-t border-[#28333D]/60 bg-[#16202C]/65 backdrop-blur-md px-4 py-3 sm:px-6 md:px-8 flex items-center justify-end font-mono text-[11px] text-[#9AA8B8]">
           <div>
             © 2026 {data.name}
           </div>

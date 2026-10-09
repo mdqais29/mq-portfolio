@@ -19,7 +19,7 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
   return (
     <div className="space-y-4">
       {/* Tab Banner */}
-      <div className="flex items-center justify-center border border-[#28333D] bg-[#19232D] px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
+      <div className="flex items-center justify-center border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
         <div className="flex items-center gap-2">
           <FolderGit2 className="h-4 w-4" />
           <span>PROJECTS</span>
@@ -29,7 +29,7 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
       {/* Timeline Rail Container */}
       <div className="relative py-2 space-y-4">
         {/* Continuous Rail Line */}
-        <div className="absolute left-[13px] sm:left-[15px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#78B9AF]/50 via-[#28333D] to-[#28333D]" />
+        <div className="absolute left-[13px] sm:left-[15px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#78B9AF]/50 via-[#28333D]/60 to-[#28333D]/40" />
 
         {projects.map((proj) => {
           const isOpen = activeId === proj.id;
@@ -43,8 +43,8 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
                 onClick={() => handleToggle(proj.id)}
                 className={`absolute left-[2px] sm:left-[4px] top-4 z-10 flex h-6 w-6 items-center justify-center rounded-full border transition-all duration-200 cursor-pointer focus:outline-none ${
                   isOpen
-                    ? "border-[#78B9AF] bg-[#1E3035] text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
-                    : "border-[#28333D] bg-[#121923] text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
+                    ? "border-[#78B9AF] bg-[#1E3035]/80 text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
+                    : "border-[#28333D]/80 bg-[#121923]/60 text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
                 }`}
                 aria-label={`Toggle ${proj.title} details`}
               >
@@ -60,8 +60,8 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
                 onClick={() => handleToggle(proj.id)}
                 className={`ml-9 sm:ml-11 cursor-pointer rounded-xl border p-4 sm:p-5 transition-all select-none ${
                   isOpen
-                    ? "border-[#78B9AF]/70 bg-[#16222E] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-                    : "border-[#28333D] bg-[#121923] hover:border-[#3A4754] hover:bg-[#151D28]"
+                    ? "border-[#78B9AF]/70 bg-[#16222E]/80 backdrop-blur-xs shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                    : "border-[#28333D]/70 bg-[#121923]/60 hover:border-[#3A4754] hover:bg-[#151D28]/80 backdrop-blur-xs"
                 }`}
               >
                 {/* Clean Header: Title on Left, Link on Right */}
@@ -92,7 +92,7 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
                       transition={{ duration: 0.22, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-3.5 mt-3 border-t border-[#28333D]">
+                      <div className="pt-3.5 mt-3 border-t border-[#28333D]/60">
                         <p className="font-sans text-xs sm:text-sm text-[#9AA8B8] leading-relaxed">
                           {proj.description}
                         </p>
@@ -104,7 +104,7 @@ export const ProjectsTab: React.FC<ProjectsTabProps> = ({ projects }) => {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-2 rounded-lg border border-[#78B9AF] bg-[#1E3035] px-4 py-2 font-mono text-xs font-semibold uppercase text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors"
+                            className="inline-flex items-center gap-2 rounded-lg border border-[#78B9AF] bg-[#1E3035]/80 px-4 py-2 font-mono text-xs font-semibold uppercase text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors"
                           >
                             <span>
                               {isFigma ? "View Case Study" : "Visit Project"}

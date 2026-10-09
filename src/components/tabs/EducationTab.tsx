@@ -23,7 +23,7 @@ export const EducationTab: React.FC<EducationTabProps> = ({
   return (
     <div className="space-y-4">
       {/* Tab Banner */}
-      <div className="flex items-center justify-center border border-[#28333D] bg-[#19232D] px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
+      <div className="flex items-center justify-center border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
         <div className="flex items-center gap-2">
           <GraduationCap className="h-4 w-4" />
           <span>EDUCATION & LANGUAGES</span>
@@ -33,7 +33,7 @@ export const EducationTab: React.FC<EducationTabProps> = ({
       {/* Timeline Rail Container */}
       <div className="relative py-2 space-y-4">
         {/* Continuous Rail Line */}
-        <div className="absolute left-[13px] sm:left-[15px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#78B9AF]/50 via-[#28333D] to-[#28333D]" />
+        <div className="absolute left-[13px] sm:left-[15px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#78B9AF]/50 via-[#28333D]/60 to-[#28333D]/40" />
 
         {/* Education Items */}
         {education.map((item) => {
@@ -47,8 +47,8 @@ export const EducationTab: React.FC<EducationTabProps> = ({
                 onClick={() => handleToggle(item.id)}
                 className={`absolute left-[2px] sm:left-[4px] top-4 z-10 flex h-6 w-6 items-center justify-center rounded-full border transition-all duration-200 cursor-pointer focus:outline-none ${
                   isOpen
-                    ? "border-[#78B9AF] bg-[#1E3035] text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
-                    : "border-[#28333D] bg-[#121923] text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
+                    ? "border-[#78B9AF] bg-[#1E3035]/80 text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
+                    : "border-[#28333D]/80 bg-[#121923]/60 text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
                 }`}
                 aria-label={`Toggle ${item.degree} details`}
               >
@@ -64,8 +64,8 @@ export const EducationTab: React.FC<EducationTabProps> = ({
                 onClick={() => handleToggle(item.id)}
                 className={`ml-9 sm:ml-11 cursor-pointer rounded-xl border p-4 sm:p-5 transition-all select-none ${
                   isOpen
-                    ? "border-[#78B9AF]/70 bg-[#16222E] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-                    : "border-[#28333D] bg-[#121923] hover:border-[#3A4754] hover:bg-[#151D28]"
+                    ? "border-[#78B9AF]/70 bg-[#16222E]/80 backdrop-blur-xs shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                    : "border-[#28333D]/70 bg-[#121923]/60 hover:border-[#3A4754] hover:bg-[#151D28]/80 backdrop-blur-xs"
                 }`}
               >
                 {/* Header: Degree and Period */}
@@ -93,7 +93,7 @@ export const EducationTab: React.FC<EducationTabProps> = ({
                       transition={{ duration: 0.22, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-3.5 mt-3 border-t border-[#28333D] space-y-2">
+                      <div className="pt-3.5 mt-3 border-t border-[#28333D]/60 space-y-2">
                         {item.highlights.map((point, pIdx) => (
                           <div
                             key={pIdx}
@@ -120,8 +120,8 @@ export const EducationTab: React.FC<EducationTabProps> = ({
             onClick={() => handleToggle("languages")}
             className={`absolute left-[2px] sm:left-[4px] top-4 z-10 flex h-6 w-6 items-center justify-center rounded-full border transition-all duration-200 cursor-pointer focus:outline-none ${
               activeId === "languages"
-                ? "border-[#78B9AF] bg-[#1E3035] text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
-                : "border-[#28333D] bg-[#121923] text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
+                ? "border-[#78B9AF] bg-[#1E3035]/80 text-[#78B9AF] shadow-[0_0_12px_rgba(120,185,175,0.4)]"
+                : "border-[#28333D]/80 bg-[#121923]/60 text-[#9AA8B8] group-hover:border-[#78B9AF]/70 group-hover:text-[#E8EDF3]"
             }`}
             aria-label="Toggle languages details"
           >
@@ -139,8 +139,8 @@ export const EducationTab: React.FC<EducationTabProps> = ({
             onClick={() => handleToggle("languages")}
             className={`ml-9 sm:ml-11 cursor-pointer rounded-xl border p-4 sm:p-5 transition-all select-none ${
               activeId === "languages"
-                ? "border-[#78B9AF]/70 bg-[#16222E] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
-                : "border-[#28333D] bg-[#121923] hover:border-[#3A4754] hover:bg-[#151D28]"
+                ? "border-[#78B9AF]/70 bg-[#16222E]/80 backdrop-blur-xs shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+                : "border-[#28333D]/70 bg-[#121923]/60 hover:border-[#3A4754] hover:bg-[#151D28]/80 backdrop-blur-xs"
             }`}
           >
             <div className="font-mono text-sm sm:text-base font-bold text-[#E8EDF3] flex items-center gap-2">
@@ -157,11 +157,11 @@ export const EducationTab: React.FC<EducationTabProps> = ({
                   transition={{ duration: 0.22, ease: "easeOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="pt-3.5 mt-3 border-t border-[#28333D] grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                  <div className="pt-3.5 mt-3 border-t border-[#28333D]/60 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                     {languages.map((lang, lIdx) => (
                       <div
                         key={lIdx}
-                        className="rounded-lg border border-[#28333D] bg-[#121923] p-3 text-center"
+                        className="rounded-lg border border-[#28333D]/70 bg-[#121923]/60 p-3 text-center"
                       >
                         <div className="font-mono text-xs font-semibold text-[#E8EDF3]">
                           {lang.language}

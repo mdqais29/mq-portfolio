@@ -28,7 +28,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
   };
 
   return (
-    <aside className="w-full rounded-2xl border border-[#28333D] bg-[#121923] p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.3)] flex flex-col gap-5 select-none">
+    <aside className="w-full rounded-2xl border border-[#28333D]/70 bg-[#121923]/65 backdrop-blur-md p-5 sm:p-6 shadow-[0_8px_30px_rgba(0,0,0,0.35)] flex flex-col gap-5 select-none">
       {/* Profile Photo & Title Card */}
       <div className="flex flex-col items-center text-center">
         {/* Name Header */}
@@ -37,7 +37,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
         </h2>
 
         {/* Framed Photo with refined dark border */}
-        <div className="relative h-48 w-48 sm:h-52 sm:w-52 overflow-hidden rounded-2xl border-2 border-[#28333D] bg-[#19232D] shadow-[0_0_25px_rgba(0,0,0,0.5)]">
+        <div className="relative h-48 w-48 sm:h-52 sm:w-52 overflow-hidden rounded-2xl border-2 border-[#28333D]/70 bg-[#19232D]/60 shadow-[0_0_25px_rgba(0,0,0,0.5)]">
           <Image
             src={profilePic}
             alt={data.name}
@@ -64,16 +64,16 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
       </div>
 
       {/* Contact Section Directly Below Photo */}
-      <div className="rounded-xl border border-[#28333D] bg-[#19232D]/90 overflow-hidden shadow-inner">
+      <div className="rounded-xl border border-[#28333D]/70 bg-[#19232D]/50 backdrop-blur-xs overflow-hidden shadow-inner">
         {/* Dark Header Banner */}
-        <div className="flex items-center justify-center border-b border-[#28333D] bg-[#16202C] px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
+        <div className="flex items-center justify-center border-b border-[#28333D]/60 bg-[#16202C]/60 px-4 py-2.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
           <span>CONTACT & PROFILES</span>
         </div>
 
         {/* Contact Links & Details */}
         <div className="p-3.5 space-y-2.5 font-mono text-xs text-[#E8EDF3]">
           {/* Email row with copy action */}
-          <div className="flex items-center justify-between gap-2 p-2.5 rounded-lg border border-[#28333D] bg-[#121923] hover:border-[#3A4754] transition-colors">
+          <div className="flex items-center justify-between gap-2 p-2.5 rounded-lg border border-[#28333D]/70 bg-[#121923]/50 hover:bg-[#121923]/80 hover:border-[#3A4754] transition-colors">
             <div className="flex items-center gap-2.5 min-w-0">
               <Mail className="h-4 w-4 text-[#78B9AF] shrink-0" />
               <span className="truncate text-[11px] text-[#E8EDF3]">
@@ -86,7 +86,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
               className={`p-1.5 rounded-md border transition-all cursor-pointer shrink-0 ${
                 copied
                   ? "border-[#78B9AF] bg-[#78B9AF]/20 text-[#78B9AF]"
-                  : "border-[#28333D] bg-[#19232D] text-[#9AA8B8] hover:border-[#78B9AF] hover:text-[#78B9AF]"
+                  : "border-[#28333D]/80 bg-[#19232D]/70 text-[#9AA8B8] hover:border-[#78B9AF] hover:text-[#78B9AF]"
               }`}
             >
               {copied ? (
@@ -102,7 +102,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
             href={data.socials.qdelta}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D] bg-[#121923] hover:border-[#78B9AF]/70 hover:bg-[#15232A] transition-all"
+            className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D]/70 bg-[#121923]/50 hover:border-[#78B9AF]/70 hover:bg-[#15232A]/80 transition-all"
           >
             <div className="flex items-center gap-2.5">
               <Globe className="h-4 w-4 text-[#78B9AF] shrink-0" />
@@ -121,7 +121,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D] bg-[#121923] hover:border-[#0A66C2]/60 hover:bg-[#0A66C2]/10 transition-all"
+              className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D]/70 bg-[#121923]/50 hover:border-[#0A66C2]/60 hover:bg-[#0A66C2]/15 transition-all"
             >
               <div className="flex items-center gap-2">
                 <svg className="h-4 w-4 fill-current text-[#78B9AF] group-hover:text-[#0A66C2] transition-colors" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
               href={data.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D] bg-[#121923] hover:border-[#78B9AF]/60 hover:bg-[#78B9AF]/10 transition-all"
+              className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D]/70 bg-[#121923]/50 hover:border-[#78B9AF]/60 hover:bg-[#78B9AF]/15 transition-all"
             >
               <div className="flex items-center gap-2">
                 <svg className="h-4 w-4 fill-current text-[#78B9AF] transition-colors" viewBox="0 0 24 24">
@@ -150,8 +150,8 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
           </div>
 
           {/* Live Availability Status Pill with subtle glow */}
-          <div className="pt-2 border-t border-[#28333D]">
-            <div className="flex items-center gap-2.5 rounded-lg border border-[#78B9AF]/30 bg-[#162728] px-3 py-2.5 text-xs text-[#78B9AF] shadow-[0_0_15px_rgba(120,185,175,0.08)]">
+          <div className="pt-2 border-t border-[#28333D]/60">
+            <div className="flex items-center gap-2.5 rounded-lg border border-[#78B9AF]/30 bg-[#162728]/80 backdrop-blur-xs px-3 py-2.5 text-xs text-[#78B9AF] shadow-[0_0_15px_rgba(120,185,175,0.08)]">
               <span className="relative flex h-2.5 w-2.5 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#78B9AF] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#78B9AF] shadow-[0_0_8px_#78B9AF]"></span>

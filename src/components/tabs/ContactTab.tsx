@@ -33,7 +33,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
   return (
     <div className="space-y-4">
       {/* Tab Banner */}
-      <div className="flex items-center justify-center border border-[#28333D] bg-[#19232D] px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
+      <div className="flex items-center justify-center border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-4 py-2.5 rounded-lg text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF]">
         <div className="flex items-center gap-2">
           <Mail className="h-4 w-4" />
           <span>CONTACT & INQUIRIES</span>
@@ -44,7 +44,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
         {/* Left Column: Direct Email & QDelta Venture */}
         <div className="lg:col-span-5 space-y-4">
           {/* Email Quick Action Card */}
-          <div className="rounded-xl border border-[#28333D] bg-[#121923] p-5 shadow-sm">
+          <div className="rounded-xl border border-[#28333D]/70 bg-[#121923]/65 backdrop-blur-md p-5 shadow-sm">
             <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#78B9AF] block mb-2">
               Direct Email
             </span>
@@ -53,13 +53,13 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
               Reach out directly for freelance contracts, full-time positions, or collaboration.
             </p>
 
-            <div className="mt-3 flex items-center justify-between gap-2 rounded-lg border border-[#28333D] bg-[#19232D] p-2.5">
+            <div className="mt-3 flex items-center justify-between gap-2 rounded-lg border border-[#28333D]/70 bg-[#19232D]/60 p-2.5">
               <span className="font-mono text-xs font-semibold text-[#E8EDF3] truncate">
                 {data.socials.email}
               </span>
               <button
                 onClick={handleCopyEmail}
-                className="p-1.5 rounded bg-[#121923] border border-[#28333D] hover:border-[#78B9AF] hover:text-[#78B9AF] transition-colors cursor-pointer shrink-0 text-[#9AA8B8]"
+                className="p-1.5 rounded bg-[#121923]/60 border border-[#28333D]/70 hover:border-[#78B9AF] hover:text-[#78B9AF] transition-colors cursor-pointer shrink-0 text-[#9AA8B8]"
                 title="Copy email to clipboard"
               >
                 {copied ? (
@@ -72,7 +72,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
 
             <a
               href={`mailto:${data.socials.email}`}
-              className="mt-3 flex items-center justify-center gap-2 w-full text-center rounded-lg border border-[#78B9AF] bg-[#1E3035] py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors"
+              className="mt-3 flex items-center justify-center gap-2 w-full text-center rounded-lg border border-[#78B9AF] bg-[#1E3035]/80 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors"
             >
               <span>Launch Mail Client</span>
               <ArrowUpRight className="h-4 w-4" />
@@ -80,7 +80,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
           </div>
 
           {/* QDelta Technologies Venture Card */}
-          <div className="rounded-xl border border-[#28333D] bg-[#121923] p-5 shadow-sm">
+          <div className="rounded-xl border border-[#28333D]/70 bg-[#121923]/65 backdrop-blur-md p-5 shadow-sm">
             <div className="flex items-center gap-2">
               <Building2 className="h-4 w-4 text-[#78B9AF]" />
               <span className="font-mono text-sm font-bold text-[#E8EDF3]">
@@ -105,7 +105,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
         </div>
 
         {/* Right Column: Inquiry Message Form */}
-        <div className="lg:col-span-7 rounded-xl border border-[#28333D] bg-[#121923] p-5 sm:p-6 shadow-sm">
+        <div className="lg:col-span-7 rounded-xl border border-[#28333D]/70 bg-[#121923]/65 backdrop-blur-md p-5 sm:p-6 shadow-sm">
           <div className="flex items-center gap-2 mb-4">
             <MessageSquare className="h-4 w-4 text-[#78B9AF]" />
             <h3 className="font-mono text-base font-bold text-[#E8EDF3] uppercase tracking-wide">
@@ -151,7 +151,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full rounded-lg border border-[#28333D] bg-[#19232D] px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none"
+                  className="w-full rounded-lg border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none"
                 />
               </div>
 
@@ -167,7 +167,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full rounded-lg border border-[#28333D] bg-[#19232D] px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none"
+                  className="w-full rounded-lg border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none"
                 />
               </div>
 
@@ -180,7 +180,7 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
                   onChange={(e) =>
                     setFormData({ ...formData, service: e.target.value })
                   }
-                  className="w-full rounded-lg border border-[#28333D] bg-[#19232D] px-3.5 py-2 text-xs text-[#E8EDF3] focus:border-[#78B9AF] focus:outline-none cursor-pointer"
+                  className="w-full rounded-lg border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-3.5 py-2 text-xs text-[#E8EDF3] focus:border-[#78B9AF] focus:outline-none cursor-pointer"
                 >
                   <option value="Web Development & Design">
                     Next.js Web Development / Website
@@ -209,13 +209,13 @@ export const ContactTab: React.FC<ContactTabProps> = ({ data }) => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full rounded-lg border border-[#28333D] bg-[#19232D] px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none resize-none"
+                  className="w-full rounded-lg border border-[#28333D]/70 bg-[#19232D]/60 backdrop-blur-xs px-3.5 py-2 text-xs text-[#E8EDF3] placeholder-[#6A7885] focus:border-[#78B9AF] focus:outline-none resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-lg border border-[#78B9AF] bg-[#1E3035] py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
+                className="w-full rounded-lg border border-[#78B9AF] bg-[#1E3035]/80 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#E8EDF3] hover:bg-[#78B9AF] hover:text-[#090D12] transition-colors flex items-center justify-center gap-2 cursor-pointer mt-2"
               >
                 <span>Send Note</span>
                 <Send className="h-3.5 w-3.5" />
