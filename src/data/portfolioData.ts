@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
     "I'm Mohammed Qaisuddin, an AI Generalist and Founder of QDelta Technologies. I build modern web applications, intelligent automation workflows, and responsive digital products that turn ambitious ideas into dependable, real-world solutions.",
   availableStatus: "Available for Freelance / Remote Work",
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/mdqais29",
     linkedin: "https://linkedin.com",
     email: "mohammedqaisuddin@qdelta.in",
     qdelta: "https://www.qdelta.in/",

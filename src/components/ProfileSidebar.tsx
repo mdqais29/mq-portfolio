@@ -134,7 +134,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
 
             {/* GitHub */}
             <a
-              href="https://github.com"
+              href={data.socials.github}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-2.5 rounded-lg border border-[#28333D] bg-[#121923] hover:border-[#78B9AF]/60 hover:bg-[#78B9AF]/10 transition-all"
