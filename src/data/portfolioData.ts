@@ -3,7 +3,7 @@ import { PortfolioData } from "../types/portfolio";
 export const portfolioData: PortfolioData = {
   name: "Mohammed Qaisuddin",
   identity: "AI Generalist",
-  location: "Nalgonda, Telangana, India",
+  location: "Hyderabad, India",
   bioIntro: "Building AI Solutions",
   bioExtended:
     "I'm Mohammed Qaisuddin, an AI Generalist and Founder of QDelta Technologies. I build modern web applications, intelligent automation workflows, and responsive digital products that turn ambitious ideas into dependable, real-world solutions.",
@@ -38,7 +38,7 @@ export const portfolioData: PortfolioData = {
       id: "gsa-intern",
       role: "Web Developer & Digital Support Intern",
       organization: "Global Safety Academy",
-      location: "Nalgonda, Telangana",
+      location: "Hyderabad, India",
       period: "October 2025 – September 2026",
       type: "Internship",
       description:
@@ -71,7 +71,7 @@ export const portfolioData: PortfolioData = {
       id: "qdelta-founder",
       role: "Founder & CEO",
       organization: "QDelta Technologies",
-      location: "Telangana, India",
+      location: "Hyderabad, India",
       period: "September 2026 – Present",
       type: "Venture",
       description:
