@@ -36,8 +36,8 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
           {data.name}
         </h2>
 
-        {/* Framed Photo with refined dark glowing border */}
-        <div className="relative h-48 w-48 sm:h-52 sm:w-52 overflow-hidden rounded-2xl border-2 border-[#28333D] bg-[#19232D] shadow-[0_0_25px_rgba(0,0,0,0.5)] group hover:border-[#78B9AF]/50 transition-colors">
+        {/* Framed Photo with refined dark border */}
+        <div className="relative h-48 w-48 sm:h-52 sm:w-52 overflow-hidden rounded-2xl border-2 border-[#28333D] bg-[#19232D] shadow-[0_0_25px_rgba(0,0,0,0.5)]">
           <Image
             src={profilePic}
             alt={data.name}
@@ -45,7 +45,7 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({ data }) => {
             sizes="(max-width: 768px) 192px, 208px"
             priority
             placeholder="blur"
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className="object-cover object-top"
           />
         </div>
 
