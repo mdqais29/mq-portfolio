@@ -156,14 +156,9 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
         </div>
 
         {/* Bottom Window Footer */}
-        <footer className="border-t border-[#28333D] bg-[#16202C] px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 font-mono text-[11px] text-[#9AA8B8]">
+        <footer className="border-t border-[#28333D] bg-[#16202C] px-4 py-3 sm:px-6 md:px-8 flex items-center justify-end font-mono text-[11px] text-[#9AA8B8]">
           <div>
-            © 2026 {data.name} · Verified portfolio records
-          </div>
-          <div className="flex items-center gap-3 text-[#78B9AF]">
-            <span className="font-semibold text-[#E6B357]">AI GENERALIST</span>
-            <span>·</span>
-            <span>QDelta Technologies</span>
+            © 2026 {data.name}
           </div>
         </footer>
       </div>
