@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { RotateCcw } from "lucide-react";
 import { PortfolioData, TabId } from "../types/portfolio";
@@ -42,9 +43,22 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-[#090D12] p-3 sm:p-5 md:p-8 flex flex-col items-center justify-start text-[#E8EDF3]">
+    <div className="relative min-h-screen bg-[#090D12] p-3 sm:p-5 md:p-8 flex flex-col items-center justify-start text-[#E8EDF3]">
+      {/* Background with moody pixel landscape & ambient vignette (matching Intro screen) */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <Image
+          src="/images/intro-bg.jpg"
+          alt="Atmospheric background landscape"
+          fill
+          priority
+          className="object-cover object-bottom opacity-35 mix-blend-screen scale-100 sm:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#090D12] via-[#090D12]/75 to-[#090D12]/90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,13,18,0.85)_100%)]" />
+      </div>
+
       {/* Outer Retro Digital Workspace Window Frame */}
-      <div className="w-full max-w-6xl rounded-2xl border border-[#28333D] bg-[#121923] shadow-[0_16px_48px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
+      <div className="relative z-10 w-full max-w-6xl rounded-2xl border border-[#28333D] bg-[#121923] shadow-[0_16px_48px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col">
         {/* Top Window Titlebar */}
         <header className="border-b border-[#28333D] bg-[#16202C] px-4 py-3 sm:px-6 flex items-center justify-between gap-3 select-none">
           {/* Left: Window Action Dots & App Title */}
