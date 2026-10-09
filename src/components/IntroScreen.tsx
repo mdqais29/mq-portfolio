@@ -129,11 +129,6 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter, roles }) => {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-2 font-mono text-xs text-[#9AA8B8]">
-            <span>v1.0</span>
-            <span className="h-1.5 w-1.5 rounded-full bg-[#78B9AF] animate-pulse" />
-          </div>
-
           <button
             onClick={onEnter}
             aria-label="Skip animation and enter portfolio"
@@ -193,11 +188,8 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter, roles }) => {
       </main>
 
       {/* Bottom Footer Tagline */}
-      <footer className="relative z-10 flex items-center justify-between px-6 py-5 sm:px-12 md:px-16 text-xs font-mono text-[#9AA8B8]/80 border-t border-[#28333D]/40 bg-[#090D12]/60">
-        <div className="tracking-widest uppercase text-[11px]">
-          IDEAS / AUTOMATE / CREATE / GROW
-        </div>
-        <div className="hidden sm:inline-block text-[11px]">
+      <footer className="relative z-10 flex items-center justify-end px-6 py-5 sm:px-12 md:px-16 text-xs font-mono text-[#9AA8B8]/80 border-t border-[#28333D]/40 bg-[#090D12]/60">
+        <div className="text-[11px]">
           © 2026 Md Qais Portfolio
         </div>
       </footer>
