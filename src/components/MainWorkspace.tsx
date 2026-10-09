@@ -160,7 +160,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
         {/* Bottom Window Footer */}
         <footer className="border-t border-[#28333D]/60 bg-[#16202C]/65 backdrop-blur-md px-4 py-3 sm:px-6 md:px-8 flex items-center justify-end font-mono text-[11px] text-[#9AA8B8]">
           <div>
-            © 2026 {data.name}
+            © 2026 Md Qais Portfolio
           </div>
         </footer>
       </div>

@@ -198,7 +198,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter, roles }) => {
           IDEAS / AUTOMATE / CREATE / GROW
         </div>
         <div className="hidden sm:inline-block text-[11px]">
-          Mohammed Qaisuddin • AI Generalist
+          © 2026 Md Qais Portfolio
         </div>
       </footer>
     </motion.div>
