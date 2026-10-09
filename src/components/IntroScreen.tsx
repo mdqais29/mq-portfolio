@@ -124,7 +124,7 @@ export const IntroScreen: React.FC<IntroScreenProps> = ({ onEnter, roles }) => {
           </div>
 
           <div className="font-mono text-xs sm:text-sm font-semibold tracking-wider text-[#E8EDF3] ml-1">
-            QA / PORTFOLIO.EXE
+            MQ PORTFOLIO
           </div>
         </div>
 

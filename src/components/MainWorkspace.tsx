@@ -71,7 +71,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
 
             <div className="flex items-center gap-2">
               <span className="font-mono text-xs sm:text-sm font-semibold tracking-wider text-[#E8EDF3]">
-                QA / PORTFOLIO.EXE
+                MQ PORTFOLIO
               </span>
             </div>
           </div>
