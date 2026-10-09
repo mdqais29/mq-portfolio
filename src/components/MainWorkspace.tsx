@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { RotateCcw, Minus, Square, X } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { PortfolioData, TabId } from "../types/portfolio";
 import { ProfileSidebar } from "./ProfileSidebar";
 import { AboutTab } from "./tabs/AboutTab";
@@ -62,7 +62,7 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
             </div>
           </div>
 
-          {/* Right: Window Controls & Replay Intro */}
+          {/* Right: Replay Intro */}
           <div className="flex items-center gap-2 font-mono text-xs">
             <button
               onClick={onReplayIntro}
@@ -72,18 +72,6 @@ export const MainWorkspace: React.FC<MainWorkspaceProps> = ({
               <RotateCcw className="h-3 w-3" />
               <span className="hidden sm:inline">Intro</span>
             </button>
-
-            <div className="hidden sm:flex items-center gap-1">
-              <span className="flex h-5 w-5 items-center justify-center rounded border border-[#28333D] bg-[#19232D] text-[#9AA8B8]">
-                <Minus className="h-2.5 w-2.5" />
-              </span>
-              <span className="flex h-5 w-5 items-center justify-center rounded border border-[#28333D] bg-[#19232D] text-[#9AA8B8]">
-                <Square className="h-2.5 w-2.5" />
-              </span>
-              <span className="flex h-5 w-5 items-center justify-center rounded border border-[#28333D] bg-[#19232D] text-[#9AA8B8]">
-                <X className="h-2.5 w-2.5" />
-              </span>
-            </div>
           </div>
         </header>
 
